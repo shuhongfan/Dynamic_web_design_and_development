@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery并集选择器的使用</title>
+        <script src="js/jquery-1.12.4.js"></script>
+        <style>
+            div, p { width: 180px; height: 100px; float: left;
+                padding: 10px; margin: 10px; border: 1px solid gray; }
+        </style>
+    </head>
+    <body>
+        <h3>jQuery多重选择器示例</h3>
+        <hr>
+        <div class="style01">div class="style01"</div>
+        <div class="style02">div class="style02"</div>
+        <p class="style02">p class="style02"</p>
+        <script>
+            $(document).ready(function() {
+                $("h3, p, div.style01").css("border", "5px solid red");
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery子元素选择器示例</title>
+        <script src="js/jquery-1.12.4.js"></script>
+    </head>
+    <body>
+        <h3>jQuery子元素选择器示例</h3>
+        <hr>
+        <ul class="all">
+            <li>第一章</li>
+            <li>第二章</li>
+            <ol>
+                <li>第一节</li>
+                <li>第二节</li>
+            </ol>
+            <li>第三章</li>
+        </ul>
+        <script>
+            $(document).ready(function() {
+                $("ul.all>li").css("border", "1px solid red");
+            });
+        </script>
+    </body>
+</html>

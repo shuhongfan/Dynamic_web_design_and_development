@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title> JavaScript DOM中使用querySelector()查找元素的应用</title>
+  </head>
+  <body>
+    <div id="box">box</div>
+    <div class="bar">bar</div>
+    <div name="main">main</div>
+    <script>
+      console.log(document.querySelector('div'));             // 获取匹配到的第1个div
+      console.log(document.querySelector('#box'));            // 获取id为box的第1个div
+      console.log(document.querySelector('.bar'));            // 获取class为bar的第1个div
+      console.log(document.querySelector('div[name]'));       // 获取含有name属性的第1个div
+      console.log(document.querySelector('div.bar'));         // 获取文档中class为bar的第1个div
+      console.log(document.querySelector('div#box'));         // 获取文档中id为box的第1个div
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript switch语句的简单应用</title>
+    </head>
+    <body>
+        <h3>JavaScript switch语句的简单应用</h3>
+        <hr />
+        <p>
+            使用switch语句判断今天是星期几。
+        </p>
+        <script>
+		//获取当前日期时间对象
+		var date = new Date();
+		//获取当前是一周中的第几天（0-6）
+		var day = date.getDay();
+		//使用switch语句判断星期几
+		switch(day){
+			case 1:alert("今天是星期一。");break;
+			case 2:alert("今天是星期二。");break;
+			case 3:alert("今天是星期三。");break;
+			case 4:alert("今天是星期四。");break;
+			case 5:alert("今天是星期五。");break;
+			case 6:alert("今天是星期六。");break;
+			case 0:alert("今天是星期日。");break;		
+		}
+        </script>
+    </body>
+</html>

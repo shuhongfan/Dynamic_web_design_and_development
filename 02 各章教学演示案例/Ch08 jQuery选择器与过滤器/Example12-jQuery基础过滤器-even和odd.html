@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery基础过滤器:even和:odd示例</title>
+        <script src="js/jquery-1.12.4.js"></script>
+    </head>
+    <body>
+        <h3>jQuery基础过滤器:even和:odd示例</h3>
+        <hr>
+        <table id="recruit" border="1" width="100%">
+            <caption>招聘信息表</caption>
+            <tr><th>地点</th><th>招聘职位</th><th>公司</th></tr>
+            <tr><td>全国</td><td>产品培训生</td><td>腾讯</td></tr>
+            <tr><td>全国</td><td>前端开发工程师</td><td>阿里巴巴</td></tr>
+            <tr><td>上海</td><td>交互设计师</td><td>网易游戏</td></tr>
+            <tr><td>北京</td><td>视觉设计师</td><td>360</td></tr>
+            <tr><td>深圳</td><td>数据分析师</td><td>IBM</td></tr>
+            <tr><td>杭州</td><td>数据研发工程师</td><td>微软</td></tr>
+        </table>
+        <script>
+            $(document).ready(function() {
+                $("tr:even").css("background-color", "lightblue");
+                $("tr:odd").css("background-color", "silver");
+            });
+        </script>
+    </body>
+</html>

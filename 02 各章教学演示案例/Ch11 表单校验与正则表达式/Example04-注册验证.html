@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>注册页面</title>
+        <style>
+            .register {
+                margin: 0 auto;
+                width: 350px;
+                clear: both;
+            }
+            
+            .register dl dt {
+                width: 35%;
+                text-align: right;
+                height: 25px;
+                float: left;
+            }
+            
+            .register dl dd img {
+                vertical-align: middle;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="register">
+            <form method="post" name="myform" id="myform">
+                <h1 class="bold">注册休闲网</h1>
+                <dl>
+                    <dt>您的Email：</dt>
+                    <dd><input id="email" type="text" class="inputs" /></dd>
+                </dl>
+                <dl>
+                    <dt>输入密码：</dt>
+                    <dd><input id="pwd" type="password" class="inputs" /></dd>
+                </dl>
+                <dl>
+                    <dt>确认密码：</dt>
+                    <dd><input id="repwd" type="password" class="inputs" /></dd>
+                </dl>
+                <dl>
+                    <dt>您的姓名：</dt>
+                    <dd><input id="user" type="text" class="inputs" /></dd>
+                </dl>
+                <dl>
+                    <dt>性别：</dt>
+                    <dd>
+                        <input name="sex" type="radio" value="1" checked="checked" />男
+                        <input name="sex" type="radio" value="0" />女</dd>
+                </dl>
+                <dl>
+                    <dt class="left">出生日期：</dt>
+                    <dd>
+                        <select name="year">
+                            <option value="1998">1998</option>
+                        </select>年
+                        <select name="month">
+                            <option value="1">1</option>
+                        </select>月
+                        <select name="day">
+                            <option value="12">12</option>
+                        </select>日</dd>
+                </dl>
+                <dl>
+                    <dt>&nbsp;</dt>
+                    <dd><input name="btn" type="submit" value="注册" class="rb1" /></dd>
+                </dl>
+            </form>
+        </div>
+        <script src="js/jquery-1.12.4.js"></script>
+        <script>
+            $(document).ready(function() {
+                $("#myform").submit(function() {
+                    var pwd = $("#pwd").val();
+                    if(pwd == "") {
+                        alert("密码不能为空");
+                        return false;
+                    }
+                    if(pwd.length < 6) {
+                        alert("密码必须等于或大于6个字符");
+                        return false;
+                    }
+                    var repwd = $("#repwd").val();
+                    if(pwd != repwd) {
+                        alert("两次输入的密码不一致");
+                        return false;
+                    }
+                    var user = $("#user").val();
+                    if(user == "") {
+                        alert("姓名不能为空");
+                        return false;
+                    }
+                    for(var i = 0; i < user.length; i++) {
+                        var j = user.substring(i, i + 1);
+                        if(isNaN(j) == false) {
+                            alert("姓名中不能包含数字");
+                            return false;
+                        }
+                    }
+                    return true;
+                })
+            })
+        </script>
+    </body>
+
+</html>

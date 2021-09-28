@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery基础过滤器:not示例</title>
+        <script src="js/jquery-1.12.4.js"></script>
+    </head>
+    <body>
+        <h3>jQuery基础过滤器:not示例</h3>
+        <hr>
+		<p>这是普通段落元素。</p>
+		<p id="test">id="test"的段落元素。</p>
+		<p>这是普通段落元素。</p>
+        <script>
+            $(document).ready(function() {
+                $(":not(p#test)").css("border", "1px solid gray");
+            });
+        </script>
+    </body>
+</html>

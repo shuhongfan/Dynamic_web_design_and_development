@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript Math对象的简单应用</title>
+    </head>
+    <body>
+        <h3>JavaScript Math对象的简单应用</h3>
+        <hr />
+        <p>
+            已知球体半径为100m，使用Math对象计算球体的体积。<br>
+			公式：V = 4/3πR<sup>3</sup>
+        </p>
+        <script>
+		//初始化球体半径
+		var R = 100;
+		//计算球体的体积
+		var V = 4/3*Math.PI*Math.pow(R,3);
+		//四舍五入后显示计算结果
+		alert("半径为100的球体体积是："+Math.round(V)+"m³");
+        </script>
+    </body>
+</html>

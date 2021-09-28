@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jQueryHTML之css()</title>
+        <script src="js/jquery-1.12.4.js"></script>
+        <style>
+            div { width: 200px; height: 50px; border: 1px solid silver; }
+        </style>
+    </head>
+    <body>
+        <h3>jQueryHTML之css()</h3>
+        <hr>
+        <div>Hello jQuery</div>
+        <button id="btn01">获取CSS样式</button>
+        <button id="btn02">重置CSS样式</button>
+        <script>
+            $(document).ready(function() {
+                    //按钮1的点击事件：获取段落元素的CSS样式
+                $("#btn01").click(function() {
+                         //批量获取多个CSS样式
+                    var css = $("div").css(["color","background-color","font-size"]);
+                    alert("当前的CSS样式为：\ncolor:"+css["color"]+                 
+                         "\nbackground-color:"+css["background-color"]+  
+                         "\nfont-szie:"+css["font-size"]);
+                    });
+                    //按钮2的点击事件：重置段落元素的CSS样式
+                $("#btn02").click(function() {
+                         //批量重置多个CSS样式
+                    $("div").css({color:"white",backgroundColor:"lightcoral",fontSize:30, fontWeight:"bold"});
+                    alert("CSS样式已重置。");
+                });
+            });
+        </script>
+     </body>
+</html>

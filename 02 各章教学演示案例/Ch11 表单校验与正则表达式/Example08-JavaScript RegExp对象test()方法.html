@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript正则表达式test()方法的应用</title>
+    </head>
+    <body>
+        <h3>JavaScript正则表达式test()方法的应用</h3>
+        <hr />
+        <p>原始字符串为："Hello jQuery"</p>
+        <script>
+        //原始字符串
+        var s = "Hello jQuery";
+        //定义正则表达式，用于全局检索字母N是否存在
+        var pattern = /Q/g;
+        //匹配结果
+        var result = pattern.test(s);
+        alert("查找字母N的匹配结果:"+result);
+        </script>
+    </body>
+</html>

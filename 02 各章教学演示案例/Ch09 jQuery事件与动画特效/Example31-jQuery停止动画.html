@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery stop()不同参数对比效果</title>
+        <script src="js/jquery-1.12.4.js"></script>
+        <style>
+            p {width: 200px;height: 200px;background-color: orange;font-size: 18px;}
+        </style>
+    </head>
+    <body>
+        <h3>jQuery stop()不同参数对比效果</h3>
+        <hr>
+        <button id="btnStart" type="button">开始</button>
+        <button id="btnStop01" type="button">停止当前动画</button>
+        <button id="btnStop02" type="button">停止所有动画</button>
+        <button id="btnStop03" type="button">停止并直接完成当前动画</button>
+        <p>你好，jQuery动画！</p>
+        <script>
+            $(document).ready(function() {
+                //开始动画
+                $("#btnStart").click(function() {
+                    $("p").animate({width : "100"}, 2000)
+                    .animate({height : "100"}, 2000)
+                    .animate({fontSize : "30"}, 2000);
+                });
+                //停止当前动画
+                $("#btnStop01").click(function() {
+                    $("p").stop();
+                });
+                //停止所有动画
+                $("#btnStop02").click(function() {
+                    $("p").stop(true, false);
+                });
+                //停止并直接完成当前动画
+                $("#btnStop03").click(function() {
+                    $("p").stop(true, true);
+                });
+            });
+        </script>
+    </body>
+</html>

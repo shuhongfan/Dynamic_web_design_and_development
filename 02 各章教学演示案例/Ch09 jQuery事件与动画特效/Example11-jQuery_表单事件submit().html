@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery 表单事件示例3</title>
+        <script src="js/jquery-1.12.4.js"></script> 
+        <script>    
+            $(document).ready(function(){    
+                //触发<form>元素的submit()事件    
+                $("form").submit(function(){
+                    //获取用户输入的内容
+                    var x = $("input[type='text']").val();
+                    //检测数据有效性
+                    if(x==""||isNaN(x)){
+                        $("#tip").text("您输入的不是数字，请重新输入!");
+                        return false;//停止提交
+                    }
+                    else
+                        $("#tip").text("内容正确，正在提交。");
+                 });
+            });
+        </script>  
+    </head>
+    <body>
+        <h3>jQuery 表单事件submit()示例</h3>
+        <hr>
+        <form action="javascript:alert('提交成功！');">
+            请输入数字：<input type="text" /> <input type="submit" value="提交" />
+            <br />
+            <span id="tip"></span>
+        </form>
+    </body>
+</html>

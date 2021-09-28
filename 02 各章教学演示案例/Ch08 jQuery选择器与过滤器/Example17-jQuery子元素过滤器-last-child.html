@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery子元素过滤器:last-child示例</title>
+        <script src="js/jquery-1.12.4.js"></script>
+		<style>
+		ul{ width:100px; border:1px solid; }
+		</style>
+    </head>
+    <body>
+        <h3>jQuery子元素过滤器:last-child示例</h3>
+        <hr>
+		<ul>
+		    <li>苹果</li>
+		    <li>香蕉</li>
+		    <li>荔枝</li>
+		</ul>
+		<ul>
+		    <li>西瓜</li>
+		    <li>哈密瓜</li>
+		    <li>椰子</li>
+		</ul>
+        <script>
+            $(document).ready(function() {
+                $("li:last-child").css({fontWeight:"bold",color:"red"});
+            });
+        </script>
+    </body>
+</html>

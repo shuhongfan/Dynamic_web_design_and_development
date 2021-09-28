@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>typeof运算符的用法</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			document.write("<h2>对变量或值调用typeof运算符返回值：</h2>");
+			var width, height = 5,
+				name = "tom";
+			var date = new Date(); //获取时间日期对象
+			var arr = new Array(); //定义数组
+			document.write("width: " + typeof(width) + "<br/>"); //输出：undefined
+			document.write("height: " + typeof(height) + "<br/>"); //输出：number
+			document.write("name: " + typeof(name) + "<br/>"); //输出：string
+			document.write("date: " + typeof(date) + "<br/>"); //输出：object
+			document.write("arr: " + typeof(arr) + "<br/>"); //输出：object
+			document.write("true: " + typeof(true) + "<br/>"); //输出：boolean
+			document.write("null: " + typeof(null)); //输出：object
+		</script>
+	</body>
+</html>

@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery设置淡入/淡出渐变值</title>
+        <script src="js/jquery-1.12.4.js"></script>
+        <style>
+            p { width: 100px; height: 100px; background-color:coral; }
+        </style>
+    </head>
+    <body>
+        <h3>jQuery设置淡入/淡出渐变值(完全透明效果)</h3>
+        <button id="btn01" type="button">隐藏/显示切换</button>
+        <p id="test01">测试段落01</p>
+        <hr>
+        <h3>jQuery设置淡入/淡出渐变值(半透明效果)</h3>
+        <button id="btn02" type="button">隐藏/显示切换</button>
+        <p id="test02">测试段落02</p>
+        <hr>
+        <h3>jQuery设置淡入/淡出渐变值(完全不透明效果)</h3>
+        <button id="btn03" type="button">隐藏/显示切换</button>
+        <p id="test03">测试段落03</p>
+        <script>
+            $(document).ready(function() {
+                //完全透明效果
+                $("#btn01").click(function() {
+                    $("p#test01").fadeTo("slow", 0);
+                });
+                //半透明效果
+                $("#btn02").click(function() {
+                    $("p#test02").fadeTo("slow", 0.5);
+                });
+                //完全不透明效果
+                $("#btn03").click(function() {
+                    $("p#test03").fadeTo("slow", 1);
+                });
+            });
+        </script>
+    </body>
+</html>

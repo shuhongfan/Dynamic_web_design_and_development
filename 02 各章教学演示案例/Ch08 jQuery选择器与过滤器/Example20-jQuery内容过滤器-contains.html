@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery内容过滤器:contains示例</title>
+        <script src="js/jquery-1.12.4.js"></script>
+    </head>
+    <body>
+        <h3>jQuery内容过滤器:contains示例</h3>
+        <hr>
+        <div>北京故宫</div>
+        <div>四川九寨沟</div>
+        <div>安徽黄山</div>
+        <div>山东泰山</div>
+        <div>安徽九华山</div>
+        <script>
+            $(document).ready(function() {
+                $("div:contains('安徽')").css("color","red");
+            });
+        </script>
+    </body>
+</html>

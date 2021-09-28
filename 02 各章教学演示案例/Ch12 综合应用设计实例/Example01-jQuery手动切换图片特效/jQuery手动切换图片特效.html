@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>jQuery手动切换图片特效的设计与实现</title>
+		<style>
+			body {
+				background-color: silver;
+				text-align: center;
+			}
+			/*图片轮播区域样式设置*/
+			
+			.ppt-container {
+				width: 800px;
+				height: 400px;
+				padding: 0px;
+				margin: auto;
+			}
+			/*图片样式设置*/
+			
+			.ppt-container img {
+				float: left;
+				height: 100%;
+				width: 70%;
+				vertical-align: middle;
+			}
+			/*列表元素样式设置*/
+			
+			ul {
+				list-style: none;
+				float: left;
+				height: 100%;
+				width: 20%;
+				background-color: rgba(255, 255, 255, 0.8);
+				margin: 0;
+				padding: 0;
+			}
+			/*列表选项元素样式设置*/
+			
+			li {
+				margin-top: 25%;
+				margin-left: 10px;
+				padding-left: 10px;
+				font-family: "微软雅黑 Light";
+				text-align: left;
+			}
+			
+			li:hover {
+				color: red;
+			}
+			/*水平线样式设置*/
+			
+			hr {
+				width: 80%;
+			}
+		</style>
+		<script src="js/jquery-1.12.4.js"></script>
+	</head>
+
+	<body>
+		<!--标题-->
+		<h3>jQuery手动切换图片特效的设计与实现</h3>
+		<!--水平线-->
+		<hr>
+		<!--图片轮播区域-->
+		<div class="ppt-container">
+			<ul>
+				<li onmouseover="showImage(1)">意大利威尼斯</li>
+				<hr>
+				<li onmouseover="showImage(2)">希腊爱琴海</li>
+				<hr>
+				<li onmouseover="showImage(3)">巴黎卢浮宫</li>
+				<hr>
+				<li onmouseover="showImage(4)">印度泰姬陵</li>
+				<hr>
+				<li onmouseover="showImage(5)">英国巨石阵</li>
+				<hr>
+			</ul>
+			<img id="pptImage" src="img/3.jpg" />
+		</div>
+		<script>
+			function showImage(name) {
+				$("#pptImage").attr("src", "img/" + name + ".jpg");
+			}
+		</script>
+	</body>
+
+</html>

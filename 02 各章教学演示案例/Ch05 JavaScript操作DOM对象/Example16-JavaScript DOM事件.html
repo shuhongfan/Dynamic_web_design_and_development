@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript DOM事件的简单应用</title>
+    </head>
+    <body>
+        <h3>JavaScript DOM事件的简单应用</h3>
+        <hr />
+        <p id="p1">
+            这是一个段落元素。
+        </p>
+		<!--按钮元素-->		
+		<button onclick="change()">点击此处更改段落内容</button>
+        <script>
+		function change(){
+			document.getElementById("p1").innerHTML = "onclick事件被触发，从而调用了change()函数修改了此段文字内容。";
+		}
+        </script>
+    </body>
+</html>

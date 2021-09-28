@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript检测字符串是否存在</title>
+    </head>
+    <body>
+        <h3>JavaScript检测字符串是否存在</h3>
+        <hr />
+		<p>查找字母y在字符串"Hello JavaScript"中的位置</p>
+        <script>
+            //声明变量msg
+            var msg = "Hello JavaScript";
+            //检测字符y存在的位置（正序）
+			var firstA = msg.indexOf("a");
+			//检测字符y存在的位置（倒序）
+			var lastA = msg.lastIndexOf("a");
+            alert('indexOf("a")：'+firstA+'\nlastIndexOf("a")：'+lastA);
+        </script>
+    </body>
+</html>

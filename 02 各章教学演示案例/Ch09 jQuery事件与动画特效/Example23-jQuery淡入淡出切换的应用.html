@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <meta charset="utf-8">
+        <title>jQuery淡入/淡出切换的应用</title>
+          <script src="js/jquery-1.12.4.js"></script>
+        <style>
+            p { width: 100px; height: 100px; background-color: green; color:white; }
+        </style>
+    </head>
+    <body>
+        <h3>jQuery淡入/淡出切换的(应用默认效果)</h3>
+        <button id="btn01" type="button"> 淡出/淡入切换 </button>
+        <p id="test01"> 测试段落01 </p>
+        <hr>
+        <h3>jQuery淡入/淡出切换的(规定时长)</h3>
+        <button id="btn02" type="button"> 淡出/淡入切换 </button>
+        <p id="test02"> 测试段落02 </p>
+          <script>
+            $(document).ready(function() {
+                $("#btn01").click(function() {
+                    $("p#test01").fadeToggle();
+                });
+                $("#btn02").click(function() {
+                    $("p#test02").fadeToggle(3000);
+                });
+            });
+        </script>
+     </body>
+</html>

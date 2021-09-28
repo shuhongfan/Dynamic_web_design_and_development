@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery 鼠标 复合事件hover()</title>
+        <style>
+            div { width: 300px; height: 350px; text-align: center;
+                float: left; margin: 20px; border: 1px solid; }
+            img { width: 200px; height: auto; }
+        </style>
+        <script src="js/jquery-1.12.4.js"></script>
+        <script>
+            $(document).ready(function() {
+                //触发灯泡的鼠标悬浮事件    
+                $("#img").hover(function() {
+                    $("#img").attr("src", "image/bulb_light.jpg");
+                }, function() {
+                    $("#img").attr("src", "image/bulb_dark.jpg");
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <h3>jQuery 鼠标复合事件hover()示例</h3>
+        <hr>
+        <div>
+            <h4>灯泡hover()事件测试</h4>
+            <img id="img" src="image/bulb_dark.jpg" />
+        </div>
+    </body>
+</html>

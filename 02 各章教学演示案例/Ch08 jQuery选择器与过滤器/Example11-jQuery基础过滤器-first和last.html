@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery基础过滤器:first和:last示例</title>
+        <script src="js/jquery-1.12.4.js"></script>
+    </head>
+    <body>
+        <h3>jQuery基础过滤器:first和:last示例</h3>
+        <hr>
+        <ul class="all">
+            <li>第一章</li>
+            <li>第二章</li>
+            <li>第三章</li>
+            <li>第四章</li>
+            <li>第五章</li>
+        </ul>
+        <script>
+            $(document).ready(function() {
+                $("li:first").css("background", "#CCCCCC");
+                $("li:last").css("background", "#808080");
+            });
+        </script>
+    </body>
+</html>

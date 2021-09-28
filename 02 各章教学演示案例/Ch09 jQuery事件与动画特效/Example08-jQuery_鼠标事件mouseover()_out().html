@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery 鼠标事件示例2-4</title>
+        <style>
+            div{
+                border:1px solid;
+                text-align:center;
+            }
+            #box01{
+                width:500px;
+                height:200px;
+                margin:20px;
+            }
+            #box02{
+                width:400px;
+                height:100px;
+                margin:50px;
+            }
+        </style>
+        <script src="js/jquery-1.12.4.js"></script> 
+        <script>    
+            $(document).ready(function(){    
+                var xOver=xOut=0;//统计鼠标进入或离开次数
+                //触发段落元素<p>的mouseenter()事件    
+                $("#box01").mouseover(function(){
+                    //鼠标进入次数自增1
+                    xOver++;
+                    //更新提示语句
+                    $("#tip01").text(xOver);                      
+                 }); 
+                
+                //触发段落元素<p>的mouseleave()事件    
+                $("#box01").mouseout(function(){
+                    //鼠标离开次数自增1
+                    xOut++;
+                    //更新提示语句
+                    $("#tip02").text(xOut);
+                 });
+            });
+        </script>  
+    </head>
+    <body>
+        <h3>jQuery 鼠标事件mouseover()与mouseout()示例</h3>
+        <hr>
+        <div id="box01">
+            父元素
+            <div id="box02">
+                子元素<br /><br />
+                发生mouseover()事件的次数：<span id="tip01">0</span>
+                <br />
+                发生mouseout()事件的次数：<span id="tip02">0</span>
+            </div>
+        </div>
+    </body>
+</html>

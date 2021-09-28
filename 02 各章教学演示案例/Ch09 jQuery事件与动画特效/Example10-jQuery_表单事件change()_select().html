@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery 表单事件示例2</title>
+        <script src="js/jquery-1.12.4.js"></script> 
+        <script>    
+            $(document).ready(function(){    
+                //触发<input>元素的change()事件    
+                $("input").change(function(){
+                    $(this).next("span").text("内容发生改变!");        
+                 });
+                //触发<input>元素的select()事件    
+                $("input").select(function(){
+                    $(this).next("span").text("文字被选中！");        
+                 });
+            });
+        </script>  
+    </head>
+    <body>
+        <h3>jQuery 表单事件change()和select()示例</h3>
+        <hr>
+        <form>
+            测试框：<input type="text" /><span></span>
+        </form>
+    </body>
+</html>

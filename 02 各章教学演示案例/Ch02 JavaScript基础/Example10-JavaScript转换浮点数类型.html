@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JavaScript转换浮点数类型的简单应用</title>
+	</head>
+	<body>
+		<h3>JavaScript转换浮点数类型的简单应用</h3>
+		<hr />
+		<p>
+			不同内容的字符串转换浮点数的结果。
+		</p>
+		<script>
+			//纯字母的情况
+			var result1 = parseFloat("hello");
+			//多个小数点的情况
+			var result2 = parseFloat("11.12.13");
+			//既有数字又包含字母的情况
+			var result3 = parseFloat("3.14PI");
+			//输出结果
+			alert("hello=> " + result1 + "\n11.12.13=> " + result2 
+			+ "\n3.14PI=> " + result3);
+		</script>
+	</body>
+</html>

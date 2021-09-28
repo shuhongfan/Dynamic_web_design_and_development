@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery 表单事件示例1</title>
+        <script src="js/jquery-1.12.4.js"></script> 
+        <script>    
+            $(document).ready(function(){    
+                //触发<input>元素的blur()事件    
+                $("input").blur(function(){
+                    $(this).next("span").text("失去焦点!");        
+                 });
+                //触发<input>元素的focus()事件    
+                $("input").focus(function(){
+                    $(this).next("span").text("获得焦点！");        
+                 });
+            });
+        </script>  
+    </head>
+    <body>
+        <h3>jQuery 表单事件blur()和focus()示例</h3>
+        <hr>
+        <form>
+            用户名：<input type="text" /><span></span>
+            <br />
+            密　码：<input type="password" /><span></span>
+        </form>
+    </body>
+</html>

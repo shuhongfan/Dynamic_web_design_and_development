@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery动画队列效果</title>
+        <script src="js/jquery-1.12.4.js"></script>
+        <style>
+            div {width: 100px;height: 100px;color:white;background-color: purple;position: relative;}
+        </style>
+    </head>
+    <body>
+        <h3>jQuery动画队列效果</h3>
+        <hr>
+        <button id="btn" type="button">开始系列动画</button>
+        <br>
+        <div>你好，jQuery动画！</div>
+        <script>
+            $(document).ready(function() {
+                $("#btn").click(function() {
+                    $("div").animate({left : "+=200px",opacity : 0.25}, 2000);
+                    $("div").animate({top : "+=100px",opacity : 0.5}, 2000);
+                    $("div").animate({left : "-=200px",opacity : 0.75}, 2000);
+                    $("div").animate({top : "-=100px",opacity : 1}, 2000);
+                });
+            });
+        </script>
+    </body>
+</html>

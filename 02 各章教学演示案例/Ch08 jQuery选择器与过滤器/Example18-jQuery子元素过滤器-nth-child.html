@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery子元素过滤器:nth-child示例</title>
+        <script src="js/jquery-1.12.4.js"></script>
+		<style>
+		    ul{ width:150px; border:1px solid; float:left; margin:10px; }
+		</style>
+    </head>
+    <body>
+        <h3>jQuery子元素过滤器:nth-child示例</h3>
+        <hr>
+		<ul id="item01">
+		li:nth-child(odd)
+		筛选奇数项
+		    <li>苹果</li>
+		    <li>香蕉</li>
+		    <li>荔枝</li>
+			<li>葡萄</li>
+		</ul>
+		<ul id="item02">
+		li:nth-child(2)
+		筛选第二个元素
+		    <li>西瓜</li>
+		    <li>哈密瓜</li>
+		    <li>椰子</li>
+		    <li>菠萝</li>
+		</ul>
+		<ul id="item03">
+		li:nth-child(3n+2)
+		筛选第3n+2个元素
+		    <li>红</li>
+		    <li>黄</li>
+		    <li>蓝</li>
+			<li>绿</li>
+		    <li>青</li>
+		    <li>橙</li>
+		    <li>紫</li>
+		</ul>
+        <script>
+            $(document).ready(function() {
+				//选择奇数项子元素
+				$("ul#item01 li:nth-child(odd)").css("color","red");
+				//选择第二个子元素
+				$("ul#item02 li:nth-child(2)").css("color","red");
+				//选择第3n+2个子元素
+				$("ul#item03 li:nth-child(3n+2)").css("color","red");
+            });
+        </script>
+    </body>
+</html>

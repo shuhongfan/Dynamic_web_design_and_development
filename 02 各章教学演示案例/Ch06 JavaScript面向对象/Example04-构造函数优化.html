@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>构造函数</title>
+</head>
+<body>
+<script>
+    function Dog(name,genera,area,uses){
+        this.name=name;
+        this.genera=genera;
+        this.area=area;
+        this.uses=uses;
+        this.showName=showName;
+    }
+    function showName(){
+        alert(this.name);
+    }
+    var dog1=new Dog("中华田园犬","犬科 犬属","中国各地，亚洲周边等地","家犬、伴侣犬 等");
+    var dog2=new Dog("拉布拉多猎犬","犬科 犬属","全世界","导盲犬、地铁警犬、搜救犬和其他工作犬等");
+    var dog3=new Dog("贵宾犬","犬科 犬属","原产欧洲，今分部世界各地 ","家犬、伴侣犬 等");
+    dog1.showName();
+    dog2.showName();
+    dog3.showName();
+    alert(dog1 instanceof Object);
+    alert(dog1 instanceof Dog);
+    alert(dog2 instanceof Object);
+    alert(dog2 instanceof Dog);
+    alert(dog3 instanceof Object);
+    alert(dog3 instanceof Dog);
+    alert(dog1.constructor==Dog);
+    alert(dog2.constructor==Dog);
+    alert(dog3.constructor==Dog);
+</script>
+</body>
+</html>

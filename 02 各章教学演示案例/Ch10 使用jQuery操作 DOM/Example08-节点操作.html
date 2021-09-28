@@ -1,0 +1,80 @@
+﻿<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>战"疫"快报</title>
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+            }
+            
+            html,
+            body {
+                font-family: "微软雅黑";
+            }
+            
+            .contain {
+                width: 320px;
+                margin: 5px auto;
+                border: 1px solid #2a65ba;
+            }
+            
+            .gameList {
+                list-style: none;
+            }
+            
+            .gameList li {
+                padding-left: 15px;
+                line-height: 40px;
+                height: 40px;
+                font-size: 12px;
+                color: #000;
+                border-bottom: 1px #aaaaaa dashed;
+            }
+            
+            h2 {
+                font-size: 16px;
+                padding-left: 20px;
+                line-height: 40px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="contain">
+            <h2>战"疫"快报</h2>
+            <ul class="gameList">
+                <li>战"疫"考察 习近平指引向科学要答案</li>
+                <li>图解：数读习近平二月战"疫"部署 微视频</li>
+                <li>国家主席习近平任免驻外大使 理上网来</li>
+                <li>致敬！最可爱的人 致敬志愿者</li>
+                <li>新华网评：向不懈的坚持致敬</li>
+            </ul>
+        </div>
+        <script src="js/jquery-1.12.4.js"></script>
+        <script>
+            $(document).ready(function() {
+                //用过滤选择器给h2设置背景颜色和字体颜色
+                $(".contain :header").css({
+                    "background": "#2a65ba",
+                    "color": "#ffffff"
+                });
+                var $newNode1 = $("<li>他们把防护服穿成了“记事本”</li>");
+                var $newNode2 = $("<li title='last'>我国口罩日产能产量双破亿背后的“硬核”支撑</li>");
+                $("ul").append($newNode1);
+                $("ul").prepend($newNode2);
+                var $newNode3 = $("<li>科学适度消毒很重要，这些你做对了吗？</li>");
+                var $newNode4 = $("<li>全国疾控系统驰援湖北检测队 完成检测总量破十万</li>");
+                $("ul").after($newNode3);
+                $("ul").before($newNode4);
+                //$(".gameList li:eq(1)").remove();
+                $(".gameList li:eq(1)").empty();
+                //li 最后一个 没有边框
+                $(".gameList li:last").css("border", "none");
+            });
+        </script>
+    </body>
+
+</html>

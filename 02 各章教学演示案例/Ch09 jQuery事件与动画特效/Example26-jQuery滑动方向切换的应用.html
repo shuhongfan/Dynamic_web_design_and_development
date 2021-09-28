@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery滑动方向切换的应用</title>
+        <script src="js/jquery-1.12.4.js"></script>
+        <style>
+            div { border: 1px solid; padding: 20px 50px;
+                display: none; width: 300px; }
+        </style>
+    </head>
+    <body>
+        <h3>jQuery滑动的应用</h3>
+        <hr>
+        <div>
+            <h3>jQuery技术</h3>
+            <ul>
+                <li>jQuery基础</li>
+                <li>jQuery选择器</li>
+                <li>jQuery过滤器</li>
+                <li>jQuery事件</li>
+                <li>jQuery效果</li>
+            </ul>
+        </div>
+        <br>
+        <button type="button"> 投影幕上升/下降 </button>
+        <script>
+            $(document).ready(function() {
+                $("button").click(function() {
+                    $("div").slideToggle(5000);
+                });
+            });
+        </script>
+    </body>
+</html>

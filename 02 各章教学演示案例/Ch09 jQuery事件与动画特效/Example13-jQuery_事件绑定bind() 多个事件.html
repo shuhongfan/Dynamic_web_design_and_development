@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>jQuery事件绑定方法示例</title>
+		<script src="js/jquery-1.12.4.js"></script>
+		<script>
+			$(document).ready(function() {
+				//id="test"的段落元素click()事件被触发
+				$("button").bind({
+					mouseover: function() {
+						$("body").css("background", "yellow");
+					},
+					mouseout: function() {
+						$("body").css("background", "#FFFFFF");
+					}
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h3>jQuery事件绑定方法bind()的简单应用</h3>
+		<hr>
+		<button>测试按钮</button>
+	</body>
+</html>

@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery方法链接的应用</title>
+        <script src="js/jquery-1.12.4.js"></script>
+        <style>
+            p {width: 100px;height: 100px;background-color: red;}
+        </style>
+    </head>
+    <body>
+        <h3>jQuery方法链接的应用</h3>
+        <hr>
+        <button id="btn" type="button">开始</button>
+        <p>测试段落</p>
+        <script>
+            $(document).ready(function() {
+                $("#btn").click(function() {
+                    $("p").slideUp("slow")
+                    .slideDown("fast")
+                    .css("background-color", "orange")
+                    .fadeTo("slow", 0)
+                    .fadeTo("slow", 1);
+                });
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript获取字符串片段</title>
+    </head>
+    <body>
+        <h3>JavaScript获取字符串片段</h3>
+        <hr />
+		<p>分别使用substring()和slice()方法节选字符串"Hello JavaScript"</p>
+        <script>
+            //声明变量msg
+            var msg = "Hello JavaScript";
+            //使用substring节选指定位置范围的字符串
+			var result1 = msg.substring(0,5);
+			//使用slice节选指定位置范围的字符串
+			var result2 = msg.slice(0,-11);
+            alert('substring(0,5)：'+result1+'\nslice(0,-11)：'+result2);
+        </script>
+    </body>
+</html>

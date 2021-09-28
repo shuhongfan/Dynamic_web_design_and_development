@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript for-in循环的简单应用</title>
+    </head>
+    <body>
+        <h3>JavaScript for-in循环的简单应用</h3>
+        <hr />
+        <script>
+		var student = new Object();
+		student.name = "张三";//姓名
+		student.age = 20;//年龄
+		student.id = "2019123";//学号
+		
+		var msg = "";
+		for(x in student){
+			msg += student[x]+"\n";
+		}
+		alert(msg);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript正则表达式exec()方法的应用</title>
+    </head>
+    <body>
+        <h3>JavaScript正则表达式exec()方法的应用</h3>
+        <hr />
+        <p>原始字符串为："Hello jQuery"</p>
+        <script>
+        //原始字符串
+        var s = "Hello jQuery";
+        //定义正则表达式，用于全局检索字母Q是否存在
+        var pattern = /Q/g;
+        //第一次匹配结果
+        var result1 = pattern.exec(s);
+        //第二次匹配结果
+        var result2 = pattern.exec(s);
+        alert("第一次匹配结果:"+result1+"\n第二次匹配结果:"+result2);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript DOM删除HTML元素</title>
+		<style>
+		div{
+			width:100px;
+			height:100px;
+			border:1px solid;
+			padding:10px;
+			margin:10px;
+			float:left;
+		}
+		p{
+		    background-color:pink;
+			width:100px;
+		}
+		</style>
+    </head>
+    <body>
+        <h3>JavaScript DOM删除HTML元素</h3>
+        <hr />
+        <div>
+		    未删除子元素的参照div。
+			<p>这是未被删除的段落元素</p>
+		</div>
+		<div id="container">
+		    删除子元素的div。
+			<p id="box">这是将被删除的段落元素</p>
+		</div>
+        <script>
+		//获取id="container"的div元素对象
+		var container = document.getElementById("container");
+		//获取id="box"的段落元素对象
+		var box = document.getElementById("box");
+		//删除子元素
+		container.removeChild(box);
+        </script>
+    </body>
+</html>

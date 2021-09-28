@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery 鼠标事件示例2-2</title> 
+        <script src="js/jquery-1.12.4.js"></script> 
+        <script>    
+            $(document).ready(function(){    
+                //触发页面的mousemove()事件    
+                 $(document).mousemove(function(event){
+                      $("#x").text(event.pageX);
+                      $("#y").text(event.pageY);
+                 }); 
+            });
+        </script>  
+    </head>
+    <body>
+        <h3>jQuery 鼠标事件mousemove()示例</h3>
+        <hr>
+        <p>
+            当前鼠标的坐标位置如下
+            <br />    
+            x坐标：<span id="x"></span>
+            <br />
+            y坐标：<span id="y"></span>
+        <p>
+    </body>
+</html>

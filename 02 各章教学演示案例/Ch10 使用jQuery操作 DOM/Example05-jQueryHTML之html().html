@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jQueryHTML之html()</title>
+        <script src="js/jquery-1.12.4.js"></script>
+        <style>
+            div {  width: 200px; height: 50px; border: 1px solid; }
+        </style>
+    </head>
+    <body>
+        <h3>jQueryHTML之html()</h3>
+        <hr>
+        <div>Hello <i>JavaScript</i></div>
+        <button id="btn01">获取HTML内容</button>
+        <button id="btn02">重置HTML内容</button>
+        <script>
+            $(document).ready(function() {
+                    //按钮1的点击事件：获取HTML内容
+                $("#btn01").click(function() {
+                    var html = $("div").html();
+                    alert("当前的HTML内容为：" + html);
+                });
+                    //按钮2的点击事件：重置HTML内容
+                $("#btn02").click(function() {
+                    $("div").html("Hello <strong>jQuery</strong>");
+                    alert("HTML内容已重置。");
+                });
+            });
+        </script>
+     </body>
+</html>

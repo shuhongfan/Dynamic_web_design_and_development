@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>改变网页背景色</title>
+    <script>
+      function color(str) {
+        document.body.style.backgroundColor = str;
+      }
+    </script>
+  </head>
+  <body>
+    <input type="button" value="设为红色" onclick="color('red')">
+    <input type="button" value="设为黄色" onmouseover="color('yellow')">
+    <input type="button" value="设为蓝色" onmouseout="color('blue')">
+  </body>
+</html>

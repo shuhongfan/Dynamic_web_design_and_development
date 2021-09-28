@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript BOM Navigator对象的应用</title>
+    </head>
+    <body>
+        <h3>JavaScript BOM Navigator对象的应用</h3>
+        <hr />
+        <script>
+		var msg = "浏览器代码名："+navigator.appCodeName;
+		msg += "<br><br>浏览器名称："+navigator.appName;
+		msg += "<br><br>浏览器版本："+navigator.appVersion;
+		msg += "<br><br>浏览器是否允许使用cookies："+navigator.cookieEnabled;
+		msg += "<br><br>浏览器所在操作系统："+navigator.platform;
+		msg += "<br><br>用户代理："+navigator.userAgent;
+		msg += "<br><br>浏览器语言："+navigator.language;
+		msg += "<br><br>浏览器品牌："+navigator.vendor;
+		//将结果输出到页面上
+		document.write(msg);
+        </script>
+    </body>
+</html>

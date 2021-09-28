@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>JavaScript DOM修改元素属性</title>
+	</head>
+
+	<body>
+		<h3>JavaScript DOM修改元素属性</h3>
+		<hr />
+		<table width="100%">
+			<tr>
+				<td>
+					<h4>原始状态：</h4>
+					<img id="img01" src="image/sunflower.jpg" alt="向日葵" />
+				</td>
+				<td>
+					<h4>使用JavaScript修改src属性后：</h4>
+					<img id="img02" src="image/sunflower.jpg" alt="向日葵" />
+				</td>
+			</tr>
+		</table>
+
+		<script>
+			//获取id="img02"的图片元素
+			var img = document.getElementById("img02");
+			//更改其src和alt属性值
+			img.src = "image/lily.jpg";
+			img.alt = "百合";
+		</script>
+	</body>
+
+</html>

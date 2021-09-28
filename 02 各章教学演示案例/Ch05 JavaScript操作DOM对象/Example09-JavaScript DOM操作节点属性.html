@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JavaScript DOM操作节点属性</title>
+	</head>
+	<body>
+		<h3>JavaScript DOM操作节点属性</h3>
+		<hr />
+		<p>选择你喜欢的花：
+			<input type="radio" name="flower" onclick="flower()">向日葵
+			<input type="radio" name="flower" onclick="flower()">百合
+		</p>
+		<div>
+			<img src="" alt="" id="image" onclick="img()"><br><span></span>
+		</div>
+		<script>
+			function flower() {
+				var ele = document.getElementsByName("flower");
+				var img = document.getElementById("image");
+				if(ele[0].checked) {
+					img.setAttribute("src", "image/sunflower.jpg");
+					img.setAttribute("alt", "向日葵");
+					img.nextSibling.nextSibling.innerHTML = "向日葵";
+				} else if(ele[1].checked) {
+					img.setAttribute("src", "image/lily.jpg");
+					img.setAttribute("alt", "百合");
+					img.nextSibling.nextSibling.innerHTML = "百合";
+				}
+			}
+			function img() {
+				var alt = document.getElementById("image").getAttribute("alt");
+				alert("图片的alt：" + alt)
+			}
+		</script>
+	</body>
+</html>

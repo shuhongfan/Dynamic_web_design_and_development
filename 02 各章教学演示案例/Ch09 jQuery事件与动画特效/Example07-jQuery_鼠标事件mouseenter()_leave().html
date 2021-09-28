@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery 鼠标事件示例2-3</title>
+        <style>
+            p{
+                width:200px;
+                height:200px;
+                border:1px solid;
+                text-align:center;
+            }
+        </style>
+        <script src="js/jquery-1.12.4.js"></script> 
+        <script>    
+            $(document).ready(function(){    
+                //触发段落元素<p>的mouseenter()事件    
+                $("p").mouseenter(function(){
+                    //更新提示语句
+                    $("#tip").text("鼠标已进入");
+                    //将段落元素背景色更新为红色
+                    $("p").css("backgroundColor","red");  
+                 }); 
+                
+                //触发段落元素<p>的mouseleave()事件    
+                $("p").mouseleave(function(){
+                    //更新提示语句
+                    $("#tip").text("鼠标已离开");
+                    //将段落元素背景色更新为浅蓝色
+                    $("p").css("backgroundColor","blue");
+                 });
+            });
+        </script>  
+    </head>
+    <body>
+        <h3>jQuery 鼠标事件mouseenter()与mouseleave()示例</h3>
+        <hr>
+        <p>
+            当前状态：<span id="tip">尚未开始</span>
+        </p>
+    </body>
+</html>

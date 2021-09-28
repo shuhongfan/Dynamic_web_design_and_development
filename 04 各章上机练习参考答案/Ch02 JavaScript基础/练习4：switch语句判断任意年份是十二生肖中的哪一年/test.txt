@@ -1,0 +1,17 @@
+已知1900年为鼠年，那么每过12年就都还是鼠年。因此如果当前年份与1900年相差的年份能被12整除，就是鼠年。如果不能整除，余数为1就是牛年，余数为2就是虎年，以此类推就可以得出所有年份的生肖。
+var year = 2020; //以2020年为例，也可更换为其他年份进行测试
+var x = (year-1900)%12;//求余数
+switch(x){
+case 0: alert(year+"年是鼠年！"); break;
+case 1: alert(year+"年是牛年！"); break;
+case 2: alert(year+"年是虎年！"); break;
+case 3: alert(year+"年是兔年！"); break;
+case 4: alert(year+"年是龙年！"); break;
+case 5: alert(year+"年是蛇年！"); break;
+case 6: alert(year+"年是马年！"); break;
+case 7: alert(year+"年是羊年！"); break;
+case 8: alert(year+"年是猴年！"); break;
+case 9: alert(year+"年是鸡年！"); break;
+case 10: alert(year+"年是狗年！"); break;
+case 11: alert(year+"年是猪年！"); break;
+}

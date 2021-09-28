@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript Object对象的简单应用</title>
+    </head>
+    <body>
+        <h3>JavaScript Object对象的简单应用</h3>
+        <hr />
+        <p>
+            自定义ticket对象表示电影票信息。
+        </p>
+        <script>
+            //自定义JavaScript对象ticket表示电影票
+            var ticket = new Object();
+			//电影票主题
+            ticket.topic = "海底总动员";
+            //电影票时间
+            ticket.time = "2019年10月1日14:30";
+            //电影票价格
+            ticket.price = "25元";
+			//电影票座位号
+            ticket.seat = "8排6号";
+            alert("电影主题: " + ticket.topic+"\n电影时间: " + ticket.time+"\n电影票价格: " + ticket.price+"\n座位号: " + ticket.seat);
+        </script>
+    </body>
+</html>

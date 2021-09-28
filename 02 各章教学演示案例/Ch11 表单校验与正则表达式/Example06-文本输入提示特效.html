@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>注册页面</title>
+        <style>
+            .register {
+                margin: 0 auto;
+                width: 500px;
+                clear: both;
+            }
+            
+            .register dl dt {
+                width: 30%;
+                text-align: right;
+                height: 25px;
+                float: left;
+            }
+            
+            .register dl dd img {
+                vertical-align: middle;
+            }
+            
+            .inputs {
+                width: 150px;
+                height: 16px;
+                border: solid 1px #666666;
+            }
+            
+            .register dl dd span {
+                color: #F00;
+                padding-left: 5px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="register">
+            <form method="post" name="myform" id="myform">
+                <h1 class="bold">用户注册</h1>
+                <dl>
+                    <dt>您的Email：</dt>
+                    <dd><input id="email" type="text" class="inputs" /><span id="DivEmail"></span></dd>
+                </dl>
+                <dl>
+                    <dt>输入密码：</dt>
+                    <dd><input id="pwd" type="password" class="inputs" /><span id="DivPwd"></span></dd>
+                </dl>
+                <dl>
+                    <dt>再输入一遍密码：</dt>
+                    <dd><input id="repwd" type="password" class="inputs" /><span id="DivRepwd"></span></dd>
+                </dl>
+                <dl>
+                    <dt>您的姓名：</dt>
+                    <dd><input id="user" type="text" class="inputs" /><span id="DivUser"></span></dd>
+                </dl>
+                <dl>
+                    <dt>性别：</dt>
+                    <dd>
+                        <input name="sex" type="radio" value="1" checked="checked" />男
+                        <input name="sex" type="radio" value="0" />女</dd>
+                </dl>
+                <dl>
+                    <dt class="left">出生日期：</dt>
+                    <dd>
+                        <select name="year">
+                            <option value="1998">1998</option>
+                        </select>年
+                        <select name="month">
+                            <option value="1">1</option>
+                        </select>月
+                        <select name="day">
+                            <option value="12">12</option>
+                        </select>日</dd>
+                </dl>
+                <dl>
+                    <dt>&nbsp;</dt>
+                    <dd><input name="btn" type="submit" value="注册" class="rb1" /></dd>
+                </dl>
+            </form>
+        </div>
+        <script src="js/jquery-1.12.4.js"></script>
+        <script>
+            $(document).ready(function() {
+                //绑定失去焦点事件
+                $("#email").blur(checkEmail);
+                $("#pwd").blur(checkPass);
+                $("#repwd").blur(checkRePass);
+                $("#user").blur(checkUser);
+
+                //提交表单,调用验证函数
+                $("#myform").submit(function() {
+                    var flag = true;
+                    if(!checkEmail()) flag = false;
+                    if(!checkPass()) flag = false;
+                    if(!checkRePass()) flag = false;
+                    if(!checkUser()) flag = false;
+                    return flag;
+                });
+            })
+            //验证Email
+            function checkEmail() {
+                var $mail = $("#email");
+                var $divID = $("#DivEmail");
+                $divID.html("");
+                if($mail.val() == "") {
+                    $divID.html("Email不能为空");
+                    return false;
+                }
+                if($mail.val().indexOf("@") == -1) {
+                    $divID.html("Email格式不正确，必须包含@");
+                    return false;
+                }
+                if($mail.val().indexOf(".") == -1) {
+                    $divID.html("Email格式不正确，必须包含.");
+                    return false;
+                }
+                return true;
+            }
+            //验证输入密码
+            function checkPass() {
+                var $pwd = $("#pwd");
+                var $divID = $("#DivPwd");
+                $divID.html("");
+                if($pwd.val() == "") {
+                    $divID.html("密码不能为空");
+                    return false;
+                }
+                if($pwd.val().length < 6) {
+                    $divID.html("密码必须等于或大于6个字符");
+                    return false;
+                }
+                return true;
+            }
+            //验证重复密码
+            function checkRePass() {
+                var $pwd = $("#pwd"); //输入密码
+                var $repwd = $("#repwd"); //再次输入密码
+                var $divID = $("#DivRepwd");
+                $divID.html("");
+                if($pwd.val() != $repwd.val()) {
+                    $divID.html("两次输入的密码不一致");
+                    return false;
+                }
+                return true;
+            }
+            //验证用户名
+            function checkUser() {
+                var $user = $("#user");
+                var $divID = $("#DivUser");
+                $divID.html("");
+                if($user.val() == "") {
+                    $divID.html("姓名不能为空");
+                    return false;
+                }
+                for(var i = 0; i < $user.val().length; i++) {
+                    var j = $user.val().substring(i, i + 1)
+                    if(j >= 0) {
+                        $divID.html("姓名中不能包含数字");
+                        return false;
+                    }
+                }
+                return true;
+            }
+        </script>
+
+    </body>
+
+</html>

@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery祖先遍历parent()的应用</title>
+        <script src="js/jquery-1.12.4.js"></script>
+          <style>
+          div{
+               width:300px;
+          }
+          span{
+               display:block;
+          }
+          ul{
+               list-style:none;
+          }
+          div,ul,p,li,span{          
+               border:1px solid gray;
+               padding:10px;
+               margin:10px;
+               background-color:white;
+          }
+          </style>
+    </head>
+    <body>
+         曾曾祖父body
+        <div>曾祖父元素div
+             <ul>祖父元素ul
+                <li>父元素li
+                    <span>元素span</span>
+                 </li>
+             </ul>
+          </div>
+        <script>
+            $(document).ready(function() {
+                    $("span").parent().css({border:"1px solid red",backgroundColor:"pink"});
+            });
+        </script>
+     </body>
+</html>

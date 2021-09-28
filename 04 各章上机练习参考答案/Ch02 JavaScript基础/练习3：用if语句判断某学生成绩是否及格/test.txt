@@ -1,0 +1,5 @@
+var score = 99; //以99分为例，也可更换为其他分数进行测试
+if(score>=60)
+   alert("及格！");
+else 
+    alert("不及格！");

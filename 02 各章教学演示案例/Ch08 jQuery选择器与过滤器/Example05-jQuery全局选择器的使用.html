@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery全局选择器示例</title>
+		<script src="js/jquery-1.12.4.js"></script>
+        <style>
+            h3 { margin: 0; }
+            div, p { width: 100px; height: 100px; float: left;
+                padding: 10px; margin: 10px; border: 1px solid gray; }
+        </style>      
+    </head>
+    <body>
+        <h3>jQuery全局选择器示例</h3>
+        <hr>
+        <div>我是DIV元素</div>
+        <p>我是P元素</p>
+        <script>
+            $(document).ready(function() {
+                $("*").css("border", "5px solid red");
+            });
+        </script>
+    </body>
+</html>

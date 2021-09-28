@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery同胞遍历prev()、prevAll()、prevUntil()的应用</title>
+        <script src="js/jquery-1.12.4.js"></script>
+          <style>
+          div{
+               width:300px;
+          }
+          ul{
+               list-style:none;
+          }
+          div,ul,li{          
+               border:1px solid gray;
+               padding:10px;
+               margin:10px;
+               background-color:white;
+          }
+          .mark{
+               border: 1px solid red;
+               background-color:pink;
+          }
+          </style>
+    </head>
+    <body>
+        <h3>jQuery同胞遍历prev()、prevAll()、prevUntil()的应用</h3>
+        <hr>
+          <div>
+             祖父元素div
+             <ul>
+                父元素ul
+                <li>元素li</li>
+                 <li>元素li</li>
+                 <li>元素li</li>
+                 <li>元素li</li>
+                 <li>元素li</li>
+             </ul>
+          </div>
+          <button id="btn01">$("li:last").prev()</button>
+          <button id="btn02">$("li:last").prevAll()</button>
+          <button id="btn03">$("li:last").prevUntil("li:eq(1)")</button>
+        <script>
+            $(document).ready(function() {
+                    //按钮1的点击事件：标记最后一个li元素的前一个同胞元素
+                    $("#btn01").click(function() {
+                         $("li:last").prevAll().removeClass("mark");
+                         $("li:last").prev().addClass("mark");
+                    });
+                    //按钮2的点击事件：标记最后一个li元素的前面所有同胞元素
+                    $("#btn02").click(function() {
+                         $("li:last").prevAll().addClass("mark");
+                    });
+                    //按钮3的点击事件：标记第二个li元素之后、最后一个li元素之前的所有同胞元素
+                    $("#btn03").click(function() {
+                         $("li:last").prevAll().removeClass("mark");
+                         $("li:last").prevUntil("li:eq(1)").addClass("mark");
+                    });                    
+            });
+        </script>
+     </body>
+</html>

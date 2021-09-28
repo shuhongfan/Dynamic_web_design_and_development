@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript查找与替换字符串</title>
+    </head>
+    <body>
+        <h3>JavaScript查找与替换字符串</h3>
+        <hr />
+        <p>用于查找和替换的字符串为"Hello JavaScript 2020 !"</p>
+        <script>
+            //声明变量msg
+            var msg = "Hello JavaScript 2020 !";
+            //检测字符o是否存在
+            var result1 = msg.search(/o/);
+            //全局查找数字
+            var result2 = msg.match(/\d/g);
+            //将小写字母a全部替换为大写字母A
+            var result3 = msg.replace(/a/g,"A");
+            alert('search(/o/)：'+result1+'\nmatch(/\\d/g)：'+result2
+                        +'\nreplace(/a/g,"A")：'+result3);
+        </script>
+    </body>
+</html>

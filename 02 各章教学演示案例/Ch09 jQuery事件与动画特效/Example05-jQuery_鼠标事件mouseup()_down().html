@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery 鼠标事件示例2-1</title>
+        <style>
+            div{
+                width:400px;
+                height:450px;
+                text-align:center;
+                float:left;
+                margin:20px;
+                border:1px solid;
+            }
+            img{
+                width:200px;
+                height:auto;
+            }    
+        </style> 
+        <script src="js/jquery-1.12.4.js"></script> 
+        <script>    
+            $(document).ready(function(){    
+                //触发灯泡的mousedown()事件    
+                 $("#img01").mousedown(function(){
+                      $("#img01").attr("src","image/bulb_light.jpg");
+                 }); 
+                
+                //触发灯泡的mouseup()事件    
+                 $("#img01").mouseup(function(){
+                      $("#img01").attr("src","image/bulb_dark.jpg");
+                 }); 
+            });
+        </script>  
+    </head>
+    <body>
+        <h3>jQuery 鼠标事件mousedown()和mouseup()示例</h3>
+        <hr>
+        <div>
+            <h4>灯泡:mousedown()和mouseup()事件测试</h4>
+            <img id="img01" src="image/bulb_dark.jpg" />
+            <br />
+            <p>开灯方法：在灯泡上按下鼠标左键</p>    
+            <p>关灯方法：在灯泡上松开鼠标左键</p>
+        </div>    
+    </body>
+</html>

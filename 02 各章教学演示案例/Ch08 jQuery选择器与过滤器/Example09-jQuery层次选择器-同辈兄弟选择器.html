@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery同辈兄弟选择器</title>
+        <script src="js/jquery-1.12.4.js"></script>
+    </head>
+    <body>
+        <h3>jQuery同辈兄弟选择器</h3>
+        <hr>
+		<ul class="all">
+            <li>第一章</li>
+            <li class="second">第二章</li>
+            <li>第三章</li>
+            <li>第四章</li>
+            <li>第五章</li>
+        </ul>
+        <script>
+            $(document).ready(function() {
+                $("li.second~li").css("border", "2px solid red");
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery子元素过滤器:has示例</title>
+        <script src="js/jquery-1.12.4.js"></script>
+        <style>
+            div{ width:100px; border:1px solid; float:left; margin:10px; }
+        </style>
+    </head>
+    <body>
+        <h3>jQuery子元素过滤器:has示例</h3>
+        <hr>
+        <div>
+            这是段落元素。
+        </div>
+        <div>
+            这是<span>段落</span>元素。
+        </div>
+        <div>
+            这是<strong>段落</strong>元素。
+        </div>
+        <script>
+            $(document).ready(function() {
+                //选择包含有strong标签的div元素
+                $("div:has(strong)").css("border","1px solid red");
+            });
+        </script>
+    </body>
+</html>

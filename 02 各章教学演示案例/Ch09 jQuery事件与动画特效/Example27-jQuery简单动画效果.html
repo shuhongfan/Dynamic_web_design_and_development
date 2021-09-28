@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery简单动画效果</title>
+        <script src="js/jquery-1.12.4.js"></script>
+        <style>
+            div {width: 200px;height: 200px;background-color: yellow;}
+        </style>
+    </head>
+    <body>
+        <h3>jQuery简单动画效果</h3>
+        <hr>
+        <button id="btn" type="button">开始动画效果</button>
+        <br>
+        <div>你好，jQuery动画！</div>
+        <script>
+            $(document).ready(function() {
+                $("#btn").click(function() {
+                    $("div").animate({width : "400",fontSize : "30",
+                        opacity : 0.25}, 2000);
+                });
+            });
+        </script>
+    </body>
+</html>

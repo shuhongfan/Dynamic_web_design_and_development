@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JavaScript DOM操作节点属性</title>
+	</head>
+	<body>
+		<h3>JavaScript DOM操作节点属性</h3>
+		<hr />
+		<p>选择你喜欢的花：
+			<input type="radio" name="flower" onclick="flower()">向日葵
+			<input type="radio" name="flower" onclick="flower()">百合
+		</p>
+		<div></div>
+		<script>
+			function flower() {
+				var ele = document.getElementsByName("flower");
+				var bName=document.getElementsByTagName("div")[0];
+				
+				if(ele[0].checked) {
+					var img=document.createElement("img");
+					img.setAttribute("src", "image/sunflower.jpg");
+					img.setAttribute("alt", "向日葵");
+					bName.appendChild(img);
+				} else if(ele[1].checked) {
+					var img=document.createElement("img");
+					img.setAttribute("src", "image/lily.jpg");
+					img.setAttribute("alt", "百合");
+					img.setAttribute("onclick","copyNode()");
+					bName.appendChild(img);
+				}
+			}
+		    function copyNode(){
+		        var bName=document.getElementsByTagName("div")[0];
+		        var copy=bName.lastChild.cloneNode(false);
+		        bName.insertBefore(copy,bName.firstChild);
+		    }
+		</script>
+	</body>
+</html>
